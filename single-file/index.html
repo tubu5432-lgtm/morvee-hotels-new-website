@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Morvee Hotels — More Value to Every Guest</title>
+<meta name="description" content="Morvee Hotels — two distinctive destinations across West Bengal: Alipore, Kolkata and Durgapur.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06141f;--bg2:#0a1f2e;--ink:#eaf4f7;--mute:#9db6c0;--gold:#d4b27a;--aqua:#6fd3e0;--line:rgba(255,255,255,.12);
+--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.7 var(--sans);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;margin:0}
+h2{font-size:clamp(34px,5vw,58px)}h3{font-size:30px}
+em{color:var(--gold)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:110px 0;position:relative}
+.eyebrow{letter-spacing:.3em;text-transform:uppercase;font-size:12px;color:var(--aqua);margin-bottom:16px;display:block}
+.btn{display:inline-block;padding:14px 30px;border:1px solid var(--gold);color:var(--gold);border-radius:40px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;transition:.4s;background:transparent;cursor:pointer;font-family:var(--sans)}
+.btn:hover,.btn.solid{background:var(--gold);color:#06141f}
+.btn.solid:hover{background:#fff;border-color:#fff}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:calc(14px + env(safe-area-inset-top,0px)) 0 14px;transition:.4s}
+nav.s{background:rgba(6,20,31,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:var(--serif);font-size:30px;letter-spacing:.12em}
+.logo sup{font-size:11px;color:var(--gold)}
+.links{display:flex;gap:26px;align-items:center;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.links a:not(.btn){position:relative;padding:4px 0}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:.4s}
+.links a:not(.btn):hover::after{width:100%}
+.links .btn{padding:10px 22px}
+#burger{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 12px;font-size:18px}
+/* hero */
+#hero{min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:140px 0 270px;
+background:linear-gradient(180deg,rgba(6,20,31,.6),rgba(6,20,31,.88)),url(https://www.morveehotels.com/assets/hero-brand.jpg) center/cover,radial-gradient(90% 70% at 78% 8%,rgba(212,178,122,.38),transparent 60%),radial-gradient(70% 60% at 10% 90%,rgba(40,110,130,.45),transparent 65%),#06141f}
+#ico{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+#ico span{position:absolute;bottom:-80px;color:var(--gold);animation:fl linear infinite;will-change:transform}
+#ico svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+@keyframes fl{0%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-60vh) rotate(8deg)}100%{transform:translateY(-125vh) rotate(-8deg)}}
+#sky{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:230px;z-index:1;pointer-events:none}
+#sky .w{animation:tw 3s ease-in-out infinite}
+@keyframes tw{50%{opacity:.25}}
+#hero .wrap{position:relative;z-index:4}
+#hero h1{font-size:clamp(48px,9vw,120px);margin:14px 0 22px}
+#hero p{max-width:540px;color:var(--mute);font-size:19px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.scrollcue{position:absolute;bottom:250px;right:32px;z-index:3;pointer-events:none;writing-mode:vertical-rl;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute)}
+/* booking */
+.book{margin-top:-90px;position:relative;z-index:10}
+.panel{background:rgba(10,31,46,.85);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.panel h4{margin:0 0 18px;font:500 12px var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.bk{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.bk2{display:grid;grid-template-columns:1fr auto;gap:20px;margin-top:20px;align-items:end}
+.bk2 .btn{white-space:nowrap;text-align:center;padding:16px 34px}
+@media(max-width:860px){.bk{grid-template-columns:1fr}.bk2{grid-template-columns:1fr}.cnt button{width:24px;height:24px}.cnt{padding:6px}}
+label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:6px}
+select,input{width:100%;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:12px;color:var(--ink);padding:13px 14px;font:300 15px var(--sans)}
+select option{color:#000}
+.cnt{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:12px;padding:6px 10px;font-size:14px}
+.cnt button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}
+.guests{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.guests small{display:block;font-size:10px;color:var(--mute);letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+/* about */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about p{color:var(--mute)}
+.bigword{font-family:var(--serif);font-size:clamp(90px,16vw,220px);line-height:.9;color:transparent;-webkit-text-stroke:1px rgba(212,178,122,.45)}
+/* hotels */
+.hotels{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:50px}
+.card{position:relative;border-radius:24px;overflow:hidden;min-height:540px;display:flex;align-items:flex-end;isolation:isolate;border:1px solid var(--line)}
+.card .bg{position:absolute;inset:-6%;z-index:-2;background-size:cover;background-position:center;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.card:hover .bg{transform:scale(1.07)}
+.card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 25%,rgba(6,20,31,.95))}
+.card .in{padding:34px}
+.card p{color:#c5d7de;margin:10px 0 22px}
+.card .row{display:flex;gap:10px;flex-wrap:wrap}
+.b1{background-image:url(https://www.morveehotels.com/assets/hotel-alipur.jpg),linear-gradient(160deg,#1f5f7a,#0b2a3b 60%,#6b4f2a)}
+.b2{background-image:url(https://www.morveehotels.com/assets/hero-durgapur.jpg),linear-gradient(200deg,#2c7a8a,#0b2a3b 60%,#1c3a4a)}
+/* destination */
+.dest{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+.d{border-radius:20px;overflow:hidden;position:relative;min-height:340px;display:flex;align-items:flex-end;padding:28px;isolation:isolate;border:1px solid var(--line)}
+.d::before{content:"";position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center}
+.d::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 30%,rgba(6,20,31,.92))}
+.d.k::before{background-image:url(https://www.morveehotels.com/assets/kolkata1.jpg),linear-gradient(135deg,#7a5a2e,#0b2a3b)}
+.d.g::before{background-image:url(https://www.morveehotels.com/assets/durgapur-city.jpg),linear-gradient(135deg,#1f6f86,#0b2a3b)}
+.d p{margin:6px 0 0;color:#c5d7de}
+/* offers */
+#offers{background:var(--bg2)}
+.offers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:46px}
+.offer{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:22px;padding:34px;transition:.5s;position:relative;overflow:hidden}
+.offer:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.offer .eyebrow{color:var(--gold)}
+.offer p{color:var(--mute)}
+.offer .btn{margin-top:8px}
+/* sustain */
+.eco li{padding:14px 0 14px 34px;border-bottom:1px solid var(--line);position:relative;list-style:none;color:var(--mute)}
+.eco li::before{content:"";position:absolute;left:0;top:20px;width:14px;height:14px;border-radius:50%;border:1px solid var(--aqua);background:radial-gradient(circle at 30% 30%,#fff8,#6fd3e044)}
+.eco{padding:0;margin:0}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:46px}
+.rev{padding:32px;border-radius:22px;background:linear-gradient(160deg,rgba(111,211,224,.08),rgba(255,255,255,.02));border:1px solid var(--line)}
+.stars{color:var(--gold);letter-spacing:4px}
+.rev p{font:italic 500 22px/1.4 var(--serif);margin:14px 0}
+.rev span{color:var(--mute);font-size:14px}
+.people{max-width:760px;margin:0 auto;text-align:center}
+.people p{color:var(--mute)}
+/* footer */
+footer{background:#040e16;padding:80px 0 30px;border-top:1px solid var(--line);font-size:15px}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:36px}
+footer h5{margin:0 0 14px;font:500 12px var(--sans);letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin:6px 0;color:var(--mute)}
+footer a:hover{color:var(--aqua)}
+.copy{margin-top:50px;padding-top:22px;border-top:1px solid var(--line);color:var(--mute);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* reveal */
+.rv{opacity:0;transform:translateY(46px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.l{transform:translateX(-50px)}.rv.r{transform:translateX(50px)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;z-index:99;background:linear-gradient(90deg,var(--aqua),var(--gold))}
+@media(max-width:860px){
+ .two,.hotels,.dest{grid-template-columns:1fr;gap:34px}
+ #burger{display:block}
+ .links{position:fixed;inset:0;background:rgba(6,20,31,.97);flex-direction:column;justify-content:center;gap:28px;font-size:16px;transform:translateY(-100%);transition:.5s}
+ .links.open{transform:none}
+ .links .x{position:absolute;top:calc(18px + env(safe-area-inset-top,0px));right:22px}
+ section{padding:80px 0}.scrollcue{display:none}
+}
+@media(min-width:861px){.links .x{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav id="nav"><div class="wrap">
+ <a class="logo" href="https://www.morveehotels.com/index.html">MORVEE<sup>™</sup></a>
+ <button id="burger" aria-label="Menu">☰</button>
+ <div class="links" id="menu">
+  <button class="x btn" id="close">×</button>
+  <a href="https://www.morveehotels.com/hotels/alipore.html">Alipore</a>
+  <a href="https://www.morveehotels.com/hotels/durgapur.html">Durgapur</a>
+  <a href="#offers">Offers</a><a href="#about">About</a><a href="#contact">Contact</a>
+  <a class="btn" href="#hotels">Book</a>
+ </div>
+</div></nav>
+
+<header id="hero">
+ <div id="ico"></div>
+ <div class="wrap">
+  <span class="eyebrow rv in">A Bengal Hospitality Collection</span>
+  <h1 class="rv in d1">More Value to <em>Every Guest.</em></h1>
+  <p class="rv in d2">At Morvee Hotels, our name is our promise — a quiet philosophy of meaningful hospitality across two distinctive destinations.</p>
+  <div class="hero-actions rv in d2"><a class="btn solid" href="#hotels">Reserve Your Stay</a><a class="btn" href="#about">Our Promise</a></div>
+ </div>
+ <div class="scrollcue">Scroll</div>
+ <svg id="sky" viewBox="0 0 1200 230" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+ <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i1" viewBox="0 0 48 48"><path d="M6 36h36M10 36a14 14 0 0 1 28 0M24 22v-4"/><circle cx="24" cy="15" r="2"/><path d="M4 41h40"/></symbol>
+<symbol id="i2" viewBox="0 0 48 48"><path d="M16 6h16c0 12-3 18-8 18S16 18 16 6zM24 24v16M16 42h16"/></symbol>
+<symbol id="i3" viewBox="0 0 48 48"><path d="M10 18h24v10a10 10 0 0 1-10 10h-4a10 10 0 0 1-10-10zM34 20h4a4 4 0 0 1 0 8h-4M16 8c0 3 3 3 0 6M24 8c0 3 3 3 0 6"/></symbol>
+<symbol id="i4" viewBox="0 0 48 48"><circle cx="15" cy="24" r="8"/><path d="M23 24h19M35 24v7M41 24v5"/></symbol>
+<symbol id="i5" viewBox="0 0 48 48"><path d="M6 36V12M6 28h36v8M42 36v-8M6 28v-4a4 4 0 0 1 4-4h10a6 6 0 0 1 6 6"/></symbol>
+<symbol id="i6" viewBox="0 0 48 48"><path d="M12 42V8h24v34M8 42h32M18 14h4M26 14h4M18 22h4M26 22h4M18 30h4M26 30h4M21 42v-6h6v6"/></symbol>
+<symbol id="i7" viewBox="0 0 48 48"><path d="M24 6l5.4 11 12.1 1.7-8.8 8.5 2.1 12.1L24 33.6 13.200 39.3l2.1-12.1-8.8-8.5 12.1-1.7z"/></symbol>
+<symbol id="i8" viewBox="0 0 48 48"><path d="M16 6v14a4 4 0 0 0 8 0V6M20 6v36M34 6c-5 4-6 12-3 18h3v18"/></symbol>
+</defs></svg>
+</header>
+
+<div class="wrap book rv"><div class="panel">
+ <h4>Reserve Your Stay · Best Rate Guaranteed</h4>
+ <div class="grid4">
+  <div><label>Destination</label><select><option>Select a hotel</option><option>Morvee Hotels — Alipore</option><option>Morvee Hotels — Durgapur</option></select></div>
+  <div><label>Check In</label><input type="date"></div>
+  <div><label>Check Out</label><input type="date"></div>
+  <div><label>Guests &amp; Rooms</label><div class="guests">
+   <div><small>Adults</small><div class="cnt"><button data-c="a" data-d="-1">−</button><b id="a">2</b><button data-c="a" data-d="1">+</button></div></div>
+   <div><small>Child</small><div class="cnt"><button data-c="c" data-d="-1">−</button><b id="c">0</b><button data-c="c" data-d="1">+</button></div></div>
+   <div><small>Rooms</small><div class="cnt"><button data-c="r" data-d="-1">−</button><b id="r">1</b><button data-c="r" data-d="1">+</button></div></div>
+  </div></div>
+  <a class="btn solid" href="https://www.morveehotels.com/booking.html" style="text-align:center">Check Availability</a>
+ </div>
+</div></div>
+
+<section id="about"><div class="wrap two">
+ <div class="rv l"><div class="bigword">Mor<br>Vee</div></div>
+ <div class="rv r about">
+  <span class="eyebrow">Our Promise</span>
+  <h2>More Value to Every <em>Guest.</em></h2>
+  <p style="margin:24px 0">At Morvee Hotels, our name reflects our promise — "Morvee" means More Value to Every Guest. This belief is at the heart of everything we do. We understand that hospitality is more than providing a room; it is about creating meaningful experiences, memorable moments, and a sense of belonging for every guest who walks through our doors.</p>
+  <a class="btn" href="#hotels">Discover the Hotels</a>
+ </div>
+</div></section>
+
+<section id="hotels" style="padding-top:20px"><div class="wrap">
+ <div class="rv"><span class="eyebrow">Our Hotels</span><h2>Two properties. <em>One philosophy.</em></h2></div>
+ <div class="hotels">
+  <article class="card rv"><div class="bg b1" data-par></div><div class="in">
+   <span class="eyebrow">Alipore · Kolkata</span><h3>Morvee Hotels — Alipore</h3>
+   <p>A refined city retreat where colonial architecture meets modern Bengali craft — a heritage address in South Kolkata's most storied neighbourhood.</p>
+   <div class="row"><a class="btn solid" href="https://www.morveehotels.com/hotels/alipore.html">Hotel Details</a><a class="btn" href="https://virtualle.io/Hospitality/Morvee-Alipore/">Virtual Tour 360°</a></div></div></article>
+  <article class="card rv d1"><div class="bg b2" data-par></div><div class="in">
+   <span class="eyebrow">Benachity · Durgapur</span><h3>Morvee Hotels — Durgapur</h3>
+   <p>A contemporary tower at the heart of India's first planned city — designed for business, celebration and the rhythm of modern Bengal.</p>
+   <div class="row"><a class="btn solid" href="https://www.morveehotels.com/hotels/durgapur.html">Hotel Details</a><a class="btn" href="https://virtualle.io/Hospitality/Morvee-Durgapur/">Virtual Tour 360°</a></div></div></article>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="rv" style="max-width:720px"><span class="eyebrow">Destination</span><h2>Where <em>Bengal</em> meets the world.</h2>
+ <p style="color:var(--mute);margin:20px 0 28px">From the colonial boulevards of South Kolkata to the planned grid of India's first steel city, Morvee invites you to a Bengal that is both familiar and reimagined — through art, food, and an architecture that listens.</p>
+ <a class="btn" href="#hotels">Plan Your Journey</a></div>
+ <div class="dest">
+  <div class="d k rv l"><div><span class="eyebrow">Kolkata</span><h3>Culture &amp; Heritage</h3><p>Explore Victoria Memorial, Park Street and the timeless charm of South Kolkata from our doorstep in Alipore.</p></div></div>
+  <div class="d g rv r"><div><span class="eyebrow">Durgapur</span><h3>Industry &amp; Leisure</h3><p>Discover modern Bengal, scenic getaways and vibrant celebrations at the heart of the steel city.</p></div></div>
+ </div>
+</div></section>
+
+<section id="offers"><div class="wrap">
+ <div class="rv"><span class="eyebrow">Exclusive Offers</span><h2>Curated experiences <em>and special stays.</em></h2></div>
+ <div class="offers">
+  <div class="offer rv"><span class="eyebrow">Weekend Escape</span><h3>Book Direct, Enjoy More</h3><p>Unwind with a relaxing weekend getaway including breakfast for two, late checkout and a complimentary in-room amenity.</p><a class="btn" href="https://www.morveehotels.com/booking.html">View Offer</a></div>
+  <div class="offer rv d1"><span class="eyebrow">Wedding Package</span><h3>Celebrate Grand Moments</h3><p>Banquet, catering and accommodation packages tailored for unforgettable Bengali celebrations across both properties.</p><a class="btn" href="#contact">Enquire Now</a></div>
+  <div class="offer rv d2"><span class="eyebrow">Business Travel</span><h3>Corporate Advantage</h3><p>Flexible stays, dedicated meeting spaces, high-speed Wi-Fi and exclusive corporate rates for the modern traveller.</p><a class="btn" href="#contact">Learn More</a></div>
+ </div>
+</div></section>
+
+<section><div class="wrap two">
+ <div class="rv l"><span class="eyebrow">Sustainability</span><h2>Responsible hospitality for a <em>better tomorrow.</em></h2></div>
+ <div class="rv r"><p style="color:var(--mute);margin-top:0">Morvee Hotels is committed to reducing environmental impact through energy-efficient operations, responsible water usage, reduced plastic consumption and community-focused initiatives.</p>
+ <ul class="eco"><li>Reduced single-use plastics across both properties</li><li>Water conservation and rainwater harvesting</li><li>Local sourcing and community partnerships</li><li>Energy-efficient operations and LED lighting</li></ul></div>
+</div></section>
+
+<section style="background:var(--bg2)"><div class="wrap">
+ <div class="rv"><span class="eyebrow">Guest Reviews</span><h2>What our <em>guests say.</em></h2></div>
+ <div class="revs">
+  <div class="rev rv"><div class="stars">★★★★★</div><p>"Excellent hospitality and a very comfortable stay. The staff went above and beyond at every touchpoint."</p><span>— Rahul S.</span></div>
+  <div class="rev rv d1"><div class="stars">★★★★★</div><p>"One of the finest banquet experiences in the region. From the décor to the food, every detail was perfect."</p><span>— Priya M.</span></div>
+  <div class="rev rv d2"><div class="stars">★★★★★</div><p>"Modern rooms, exceptional food and outstanding service. Morvee has set a new bar for hospitality in Bengal."</p><span>— Arindam D.</span></div>
+ </div>
+</div></section>
+
+<section><div class="wrap people rv"><span class="eyebrow">Morvee</span><p style="font:italic 500 26px/1.5 var(--serif);color:var(--ink)">Our commitment extends beyond our guests to our people. We invest in building a skilled, passionate, and service-oriented workforce that shares our dedication to hospitality excellence. By fostering a culture of continuous learning, teamwork, and respect, we empower our employees to transform ordinary interactions into extraordinary experiences.</p></div></section>
+
+<footer id="contact"><div class="wrap">
+ <div class="fg">
+  <div><h5>Support</h5><ul>
+   <li><a href="https://www.morveehotels.com/assets/terms-and-conditions">Terms and Conditions</a></li>
+   <li><a href="https://www.morveehotels.com/assets/cancellation-policy">Cancellation Policy</a></li>
+   <li><a href="https://www.morveehotels.com/assets/refund-policy">Refund Policy</a></li></ul>
+   <h5 style="margin-top:28px">Hotels</h5><ul>
+   <li><a href="https://www.morveehotels.com/hotels/alipore.html">Morvee Alipore</a></li>
+   <li><a href="https://www.morveehotels.com/hotels/durgapur.html">Morvee Durgapur</a></li></ul></div>
+  <div><h5>Contact Us</h5><ul>
+   <li><b>MORVEE HOTELS ALIPORE</b></li>
+   <li><a href="https://maps.app.goo.gl/ZeUrP2kdG5Z34RSm6">21 B Alipore Road, Kolkata 700027</a></li>
+   <li><a href="tel:+918100875424">+918100875424</a></li>
+   <li><a href="tel:+918100875421">+918100875421</a></li>
+   <li><a href="mailto:reservations.alipore@morveehotels.com">reservations.alipore@morveehotels.com</a></li>
+   <li><a href="https://www.morveehotels.com/booking.html" style="color:var(--gold)">Reserve a Stay</a></li>
+   <li>Check In: 12 PM · Check Out: 11 AM</li></ul></div>
+  <div><h5>Contact Us</h5><ul>
+   <li><b>MORVEE HOTELS DURGAPUR</b></li>
+   <li><a href="https://maps.app.goo.gl/uVjRFKY9SA7sye63A">Raj Sammilonee Mall, Ananda Gopal Mukherjee Sarani Rd, Bhiringi, Benachity, Durgapur, West Bengal 713213</a></li>
+   <li><a href="tel:+918653005639">+918653005639</a></li>
+   <li><a href="mailto:reservations.durgapur@morveehotels.com">reservations.durgapur@morveehotels.com</a></li>
+   <li><a href="https://www.morveehotels.com/booking.html" style="color:var(--gold)">Reserve a Stay</a></li>
+   <li>Check In: 12 PM · Check Out: 11 AM</li></ul></div>
+ </div>
+ <div class="copy"><span>© 2026 Morvee Hotels. All rights reserved.</span><span>Privacy · Terms · Accessibility</span></div>
+</div></footer>
+
+<script>
+// nav, progress, parallax
+const nav=document.getElementById('nav'),bar=document.getElementById('bar'),pars=document.querySelectorAll('[data-par]');
+function onScroll(){const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+ nav.classList.toggle('s',y>40);bar.style.width=(h>0?y/h*100:0)+'%';
+ pars.forEach(p=>{const r=p.parentElement.getBoundingClientRect();p.style.transform='translateY('+((r.top+r.height/2-innerHeight/2)*-.06)+'px)'});}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv:not(.in)').forEach(el=>io.observe(el));
+// menu
+const m=document.getElementById('menu');
+document.getElementById('burger').onclick=()=>m.classList.add('open');
+document.getElementById('close').onclick=()=>m.classList.remove('open');
+m.querySelectorAll('a').forEach(a=>a.onclick=()=>m.classList.remove('open'));
+// counters
+document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{const el=document.getElementById(b.dataset.c),min=b.dataset.c==='a'||b.dataset.c==='r'?1:0;
+ el.textContent=Math.min(9,Math.max(min,+el.textContent+ +b.dataset.d))});
+// hotel / food / service icons + skyline
+const ico=document.getElementById('ico'),N=Math.min(16,Math.round(innerWidth/70));
+for(let i=0;i<N;i++){const e=document.createElement('span'),z=30+Math.random()*40;
+ e.style.cssText='left:'+Math.random()*96+'%;width:'+z+'px;height:'+z+'px;opacity:'+(.12+Math.random()*.2)+';animation-duration:'+(26+Math.random()*30)+'s;animation-delay:-'+Math.random()*40+'s;'+(i%3==0?'color:var(--aqua)':'');
+ e.innerHTML='<svg><use href="#i'+(1+i%8)+'"/></svg>';ico.appendChild(e)}
+const sk=document.getElementById('sky');let h='<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d2a3c"/><stop offset="1" stop-color="#06141f"/></linearGradient></defs>';
+const bl=[[40,120,70],[130,150,60],[210,100,80],[330,160,70],[760,140,80],[860,110,70],[950,170,60],[1030,125,80],[1120,150,70]];
+bl.forEach(b=>{h+='<rect x="'+b[0]+'" y="'+(230-b[1])+'" width="'+b[2]+'" height="'+b[1]+'" fill="url(#g)"/>';
+ for(let y=230-b[1]+14;y<216;y+=18)for(let x=b[0]+8;x<b[0]+b[2]-8;x+=16)if(Math.random()>.6)h+='<rect class="w" x="'+x+'" y="'+y+'" width="6" height="8" fill="#d4b27a" opacity=".7" style="animation-delay:-'+(Math.random()*3).toFixed(1)+'s"/>'});
+h+='<rect x="440" y="30" width="320" height="200" fill="url(#g)" stroke="rgba(212,178,122,.4)"/><rect x="420" y="20" width="360" height="12" fill="#0d2a3c" stroke="rgba(212,178,122,.4)"/><text x="600" y="62" text-anchor="middle" fill="#d4b27a" font-family="Cormorant Garamond,serif" font-size="26" letter-spacing="10">MORVEE</text>';
+for(let y=80;y<200;y+=22)for(let x=458;x<740;x+=24)h+='<rect class="w" x="'+x+'" y="'+y+'" width="10" height="12" fill="#f3d9a4" opacity="'+(Math.random()>.35?.85:.15)+'" style="animation-delay:-'+(Math.random()*3).toFixed(1)+'s"/>';
+h+='<path d="M560 230v-34h80v34z" fill="#d4b27a" opacity=".85"/><path d="M600 196v34" stroke="#06141f"/>';
+sk.innerHTML=h;
+</script>
+</body>
+</html>
